@@ -4,11 +4,40 @@
 <meta charset="UTF-8">
 <title>ELEMENTAL CLASH</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;display:flex;align-items:center;justify-content:center;min-height:100vh;overflow:hidden}canvas{display:block}</style>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+canvas{display:block}
+#top-bar{position:fixed;top:0;left:0;right:0;height:46px;background:rgba(12,14,24,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:space-between;padding:0 18px;z-index:9999;color:#fff}
+.brand{font-weight:800;letter-spacing:1.5px;font-size:14px;background:linear-gradient(90deg,#ff6b35,#f7c59f,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-transform:uppercase}
+.dl-buttons{display:flex;gap:10px}
+.dl-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;color:#fff;transition:all 0.2s ease;border:1px solid rgba(255,255,255,0.18)}
+.dl-mac{background:linear-gradient(135deg,rgba(255,255,255,0.18),rgba(255,255,255,0.06))}
+.dl-mac:hover{background:rgba(255,255,255,0.28);border-color:#fff;transform:translateY(-1px)}
+.dl-win{background:linear-gradient(135deg,rgba(0,164,239,0.35),rgba(0,164,239,0.15))}
+.dl-win:hover{background:rgba(0,164,239,0.55);border-color:#00a4ef;transform:translateY(-1px)}
+.dl-btn svg{width:14px;height:14px;fill:currentColor}
+</style>
+
 <script src="peerjs.min.js"></script>
 <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
 </head>
-<body><canvas id="c"></canvas>
+<body>\n
+<div id="top-bar">
+  <div class="brand">⚔️ Elemental Clash</div>
+  <div class="dl-buttons">
+    <a class="dl-btn dl-mac" href="downloads/Elemental-Clash-Mac.dmg" download>
+      <svg viewBox="0 0 170 170"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.58-7.7-11.64-13.98-5.74-8.88-10.15-18.96-13.25-30.22-3.1-11.26-4.64-22.34-4.64-33.24 0-14.75 3.73-27.18 11.2-37.3 7.46-10.12 17.07-15.34 28.84-15.66 4.89 0 10.33 1.25 16.32 3.76 5.99 2.5 9.77 3.82 11.33 3.94 1.8.13 5.76-1.28 11.9-4.23 6.13-2.95 11.68-4.29 16.64-4.02 12.87.64 23.33 4.96 31.4 12.98-11.26 6.84-16.74 16.33-16.44 28.47.3 9.4 3.9 17.18 10.81 23.34 6.91 6.15 15.02 9.54 24.33 10.16-2.12 6.55-4.89 13.5-8.31 20.85zM119.22 32.64c-.11 4.54-1.87 9.07-5.28 13.59-3.41 4.52-7.61 7.74-12.6 9.66-.43-4.14.7-8.48 3.4-13.02 2.7-4.54 6.64-7.9 11.82-10.08.88-.05 1.76-.1 2.66-.15z"/></svg>
+      Download for Mac (.dmg)
+    </a>
+    <a class="dl-btn dl-win" href="downloads/Elemental-Clash-Windows.zip" download>
+      <svg viewBox="0 0 88 88"><path d="M0 12.402l35.688-4.86.016 34.423-35.67.202zm35.67 33.529l.029 34.453-35.67-4.891-.019-29.364zm4.326-39.025L87.314 0v41.527l-47.318.376zm47.329 46.932l-.011 41.564-47.318-6.677-.021-34.693z"/></svg>
+      Download for Windows (.zip)
+    </a>
+  </div>
+</div>
+\n<canvas id="c"></canvas>
 <script>
 'use strict';
 const C=document.getElementById('c'),ctx=C.getContext('2d');

@@ -1,23 +1,35 @@
 # Elemental Clash
 
-An action-packed elemental battle arena game built for macOS with SwiftUI and WebKit, featuring real-time peer-to-peer online multiplayer.
+An action-packed elemental battle arena game built with real-time peer-to-peer online multiplayer. Play directly in your web browser or download the native app for your computer!
 
-## Features
-- **Local Play**: Tournament mode vs CPU or 2–6 player local battles.
-- **🌐 In-App Online Multiplayer**: Play online with friends directly using 4-letter room codes powered by WebRTC / PeerJS.
-- **6 Playable Elements**: Fire, Water, Earth, Air, Lightning, and Void each with unique projectiles and charged super attacks.
-- **Crossplay**: Play in the macOS native app or in any modern web browser.
+## 🎮 Play Online (Web)
+Play instantly in any browser (Safari, Chrome, Edge, Firefox):
+👉 **[Play Elemental Clash Online](https://colsoncav.github.io/ElemetalClash/)**
 
-## How to Play
-1. Launch **Elemental Clash** (or open `index.html` in your browser).
-2. Click **🌐 ONLINE BATTLE** on the title screen.
-3. One player clicks **HOST A GAME** to get a 4-letter room code (e.g. `7K2P`).
-4. Other players enter the room code in **JOIN A GAME** and click **JOIN ROOM**.
-5. Once ready, the host clicks **START GAME**!
+---
 
-## Opening on Another Mac
-If macOS shows *"Elemental Clash is damaged and can't be opened"* or *"Apple cannot check it for malicious software"*, this is Apple's standard Gatekeeper quarantine for apps downloaded from the internet. Run this one-line command in Terminal on the other Mac:
-```bash
-xattr -cr /path/to/"Elemental Clash.app"
-```
-Or right-click the app -> **Open** -> click **Open**.
+## 💻 Download the App
+
+You can download the game to play locally or online with friends from your desktop:
+
+| Platform | Download Link | Description |
+| :--- | :--- | :--- |
+| **macOS** | [🍏 Download for Mac (.dmg)](downloads/Elemental-Clash-Mac.dmg) | macOS App installer disk image (Universal for Intel & Apple Silicon Macs) |
+| **Windows** | [🪟 Download for Windows (.zip)](downloads/Elemental-Clash-Windows.zip) | Windows bundle with 1-click launcher (`Play Elemental Clash.bat`) |
+
+---
+
+## ⚡ Game Features
+- **🌐 Online In-App & Web Crossplay**: Play with friends using simple 4-letter room codes. No servers or accounts needed!
+- **⚔️ 6 Unique Elements**: Fire, Water, Earth, Air, Lightning, and Void — each with distinct projectiles and charged super attacks.
+- **🏆 Game Modes**: Local tournament vs AI, 2–6 player local battles, and online multiplayer.
+- **🎮 Controller Support**: Full gamepad and keyboard remapping support.
+
+---
+
+## 🍎 Opening on Mac for the First Time
+If macOS displays *"Elemental Clash is damaged and can't be opened"* or *"Apple cannot check it for malicious software"*, this is Apple's standard Gatekeeper protection for apps downloaded outside the App Store. 
+
+To open it:
+1. Double-click **`Open Elemental Clash.command`** included inside the `.dmg`.
+2. Or right-click **Elemental Clash** in Finder -> choose **Open** -> click **Open**.
